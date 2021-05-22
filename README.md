@@ -1,5 +1,5 @@
 # PyTimer
-A simple timer wtih sound made with Python using PyGame.
+A simple timer with sound made with Python using PyGame.
 
 ## Requirements
 1. PyGame
