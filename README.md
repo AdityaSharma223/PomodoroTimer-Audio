@@ -10,6 +10,8 @@ pip install pygame
 ```
 pip install playsound
 ```
+### Note
+Please make sure to change the path of the audio file accordingly.
 
 ## How to use 
 Type in the time in console in the format ```hh mm``` separated by a space and press enter to start the timer window. 
