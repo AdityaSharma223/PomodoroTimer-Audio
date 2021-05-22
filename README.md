@@ -1,4 +1,4 @@
-# PyTimer
+# Romodoro Timer
 A simple pomodoro timer with audio reminders for break and work time. 
 <br/>
 (to know more about the pomodoro technique click [here](https://en.wikipedia.org/wiki/Pomodoro_Technique))
