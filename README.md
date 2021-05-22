@@ -8,4 +8,4 @@ pip install pygame
 ```
 
 ## How to use 
-Type in the time in the console in the format ```hh mm``` separated by a space and press enter to start the timer window. 
+Type in the time in console in the format ```hh mm``` separated by a space and press enter to start the timer window. 
