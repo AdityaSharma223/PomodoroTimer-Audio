@@ -1,9 +1,5 @@
 import time
 import pygame
-import math
-import random 
-import os
-import sys
 #---------------------------
 
 #-----VARS--------------------
@@ -12,10 +8,11 @@ run = True
 s, m = 0, 0 
 hours, minutes = map(int,input("""
 Hi and welcome to PyTimer
-Please type (in minutes) how long u want the time to be
+Please type (hh mm, separated by a space and not ":") how long u want the time to be
 here: """).split())
 timel = hours*60 + minutes
 #-----------------------------
+
 #------PYGAME INIT------------
 pygame.init()
 window = pygame.display.set_mode((swidth, sheight))
