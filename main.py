@@ -10,13 +10,12 @@ import sys
 swidth, sheight = 300, 200 
 run = True
 s, m = 0, 0 
-timel = int(input("""
+hours, minutes = map(int,input("""
 Hi and welcome to PyTimer
 Please type (in minutes) how long u want the time to be
-here: """))
-
+here: """).split())
+timel = hours*60 + minutes
 #-----------------------------
-print(hours, minutes)
 #------PYGAME INIT------------
 pygame.init()
 window = pygame.display.set_mode((swidth, sheight))
@@ -46,11 +45,11 @@ while run:
 	elif len(str(s))!=2: 
 		t = str(m) + ":" + "0" + str(s)
 	else: 
-		t = str(m) + ":" + "0" + str(s)
-	myfont = pygame.font.SysFont('Comic Sans MS', 60)
+		t = str(m) + ":" + str(s)
+	myfont = pygame.font.SysFont('Lucida Console', 60)
 	timee = myfont.render(t, False, (255, 255, 255))
 	window.fill((0,0,0))
-	window.blit(timee,(75, 55))
+	window.blit(timee,(70, 65))
 	pygame.display.update()
 #-------------------------------
 pygame.quit()
