@@ -16,7 +16,7 @@ here: """).split())
 #------PYGAME INIT------------
 pygame.init()
 window = pygame.display.set_mode((swidth, sheight))
-pygame.display.set_caption("STOPWATCH")
+pygame.display.set_caption("POMO TIMER")
 #-----------------------------
 
 #------MAIN LOOP--------------
