@@ -7,12 +7,10 @@ from playsound import playsound
 swidth, sheight = 300, 200 
 run = True
 s, m = 0, 0 
-hours, minutes = map(int,input("""
-Hi and welcome to PyTimer
-Please type (hh mm, separated by a space and not ":") how long u want the time to be
-here: """).split())
-timel = hours*60 + minutes
-count = 1
+rest = False 
+work, breaka = map(int,input("""
+Please type work time and break time(in minutes) separated by a space
+here: """).split()) 
 #-----------------------------
 
 #------PYGAME INIT------------
@@ -26,15 +24,27 @@ while run:
 	pygame.time.delay(60)
 
 	time.sleep(1)
-	if m!=(timel): 
-		s+=1
-		if s>59: 
-			s=0
-			m+=1
+	if rest == False:
+		if m!=(work): 
+			s+=1
+			if s>59: 
+				s=0
+				m+=1
+		else:
+			rest = True
+			playsound(r"C:\Users\home pc\Desktop\alarm.wav") 
+			m, s = 0, 0
 	else: 
-		if count <3 : 
+		if m!=(breaka): 
+			s+=1
+			if s>59: 
+				s=0
+				m+=1
+		else: 
+			rest = False 
 			playsound(r"C:\Users\home pc\Desktop\alarm.wav")
-			count += 1
+			m, s = 0, 0
+			
 	keys = pygame.key.get_pressed()
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT: 
