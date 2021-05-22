@@ -1,5 +1,6 @@
 import time
 import pygame
+from playsound import playsound
 #---------------------------
 
 #-----VARS--------------------
@@ -11,6 +12,7 @@ Hi and welcome to PyTimer
 Please type (hh mm, separated by a space and not ":") how long u want the time to be
 here: """).split())
 timel = hours*60 + minutes
+count = 1
 #-----------------------------
 
 #------PYGAME INIT------------
@@ -29,7 +31,10 @@ while run:
 		if s>59: 
 			s=0
 			m+=1
-
+	else: 
+		if count <3 : 
+			playsound(r"C:\Users\home pc\Desktop\alarm.wav")
+			count += 1
 	keys = pygame.key.get_pressed()
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT: 
