@@ -32,7 +32,7 @@ while run:
 				m+=1
 		else:
 			rest = True
-			playsound(r"~/main/github/pomo-timer/alarm.wav")
+			playsound(r"alarm.wav")
 			m, s = 0, 0
 	else:
 		if m!=(breaka):
@@ -42,7 +42,7 @@ while run:
 				m+=1
 		else:
 			rest = False
-			playsound(r"~/main/github/pomo-timer/alarm.wav")
+			playsound(r"alarm.wav")
 			m, s = 0, 0
 
 	keys = pygame.key.get_pressed()
